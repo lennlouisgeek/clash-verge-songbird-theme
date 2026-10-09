@@ -1,0 +1,160 @@
+/*
+ * Cyberpunk 2077 · Songbird / 宋昭美
+ * Clash Verge Rev 主题（浅色规则在前，深色规则在后）
+ *
+ * 将本文件和 songbird-night-city-bg.png 保持在同一目录。
+ * 若 Clash Verge 不从主题目录读取本地图片，请把下面的 url() 改为图片的 file:/// 绝对路径。
+ */
+
+:root {
+    --songbird-cyan: #68d9e9;
+    --songbird-magenta: #e95d9e;
+    --songbird-amber: #e7a86e;
+    --songbird-ink: #15101f;
+}
+
+section,
+html,
+.base-container,
+.MuiBox-root,
+.MuiTypography-root {
+    background-color: transparent !important;
+}
+
+/* 全局背景：右侧人物，左侧保留导航与信息区的可读空间 */
+.css-1li7dvq,
+.css-l3ykv8 {
+    background-image:
+        linear-gradient(90deg, rgba(5, 9, 24, .18) 0%, rgba(5, 9, 24, .04) 54%, rgba(5, 9, 24, .10) 100%),
+        url("https://picgo-upload.cn-nb1.rains3.com/clash-verge-theme/songbird-night-city-bg.png") !important;
+    background-color: var(--songbird-ink) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+/* 左栏：半透明夜城玻璃 */
+.layout__left {
+    height: 100% !important;
+    flex: 1 0 400px !important;
+    background: linear-gradient(180deg, rgba(20, 13, 29, .48), rgba(13, 10, 22, .28)) !important;
+    border-right: 1px solid rgba(233, 93, 158, .16);
+    box-shadow: 10px 0 40px rgba(0, 0, 0, .18);
+    backdrop-filter: blur(14px) saturate(115%);
+}
+
+/* 左侧菜单：保留示例的双列与图文对齐 */
+.the-menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.the-menu li,
+.the-menu::after { flex: 0 0 50%; box-sizing: border-box; }
+.the-menu::after { content: ''; }
+.the-menu .MuiListItemButton-root { justify-content: center !important; }
+.the-menu .MuiListItemText-root { flex: none !important; margin: 0 6px 0 0 !important; text-align: left !important; }
+.the-menu .MuiListItemIcon-root { min-width: 0 !important; flex-shrink: 0 !important; margin: 0 6px !important; }
+
+.css-a7awl9.Mui-selected,
+.css-1pqmd8p.Mui-selected {
+    background: linear-gradient(100deg, rgba(233, 93, 158, .22), rgba(110, 70, 130, .16)) !important;
+    border: 1px solid rgba(233, 93, 158, .28);
+    box-shadow: inset 2px 0 0 var(--songbird-magenta), 0 0 22px rgba(233, 93, 158, .13);
+    backdrop-filter: blur(10px);
+}
+
+.css-a7awl9 span,
+.css-1pqmd8p span {
+    color: #f4f8ff !important;
+    text-shadow: 0 0 12px rgba(89, 223, 247, .45);
+}
+
+/* 首页主操作 */
+.css-14aadh2,
+.css-1dxee5s {
+    background: linear-gradient(115deg, #c94382, #7d4a9d 58%, #4e81ac) !important;
+    color: #fff !important;
+    box-shadow: 0 0 20px rgba(89, 223, 247, .34), 0 0 28px rgba(250, 77, 186, .16);
+}
+
+.css-buo882,
+.css-1woqkq7,
+.css-n8e8d,
+.css-1d9xrv7,
+.css-9kkeku,
+.css-ulr2qx {
+    background: rgba(246, 229, 242, .13) !important;
+    border: 1px solid rgba(255, 215, 235, .20) !important;
+    backdrop-filter: blur(13px) saturate(120%) !important;
+    box-shadow: 0 8px 28px rgba(2, 8, 25, .15), inset 0 1px rgba(255, 255, 255, .12) !important;
+}
+
+.css-6892g4,
+.css-1j1wdi0,
+.css-jtgpy6,
+.css-1mxksna,
+.css-1tg4gst,
+.css-17rlh6j,
+.css-nr2a57,
+.css-1ssn8mg {
+    background: rgba(20, 12, 27, .32) !important;
+    border: 1px solid rgba(242, 142, 191, .18) !important;
+    color: #edf5ff !important;
+    backdrop-filter: blur(13px) saturate(120%) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .25), inset 0 1px rgba(115, 209, 255, .07) !important;
+}
+
+/* 悬停和焦点：克制的青红霓虹，不遮挡背景人物 */
+.css-n8e8d:hover,
+.css-1d9xrv7:hover,
+.css-9kkeku:hover,
+.css-jtgpy6:hover,
+.css-1mxksna:hover,
+.css-1tg4gst:hover,
+.css-17rlh6j:hover,
+.css-ulr2qx:hover {
+    border-color: rgba(250, 77, 186, .46) !important;
+    box-shadow: 0 0 0 1px rgba(89, 223, 247, .12), 0 0 24px rgba(250, 77, 186, .14) !important;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.css-1unmb9x,
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.css-um6u34,
+.css-14wd3ve,
+.css-23cvz {
+    background: rgba(21, 13, 29, .30) !important;
+    border: 1px solid rgba(242, 142, 191, .18) !important;
+    border-radius: 15px !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .18) !important;
+}
+
+/* 表单与强调色 */
+.MuiSwitch-track { background-color: rgba(89, 223, 247, .34) !important; }
+.Mui-checked { color: var(--songbird-magenta) !important; }
+.MuiLinearProgress-bar,
+.MuiSlider-track { background-color: var(--songbird-cyan) !important; }
+.MuiSlider-thumb { color: var(--songbird-magenta) !important; box-shadow: 0 0 12px var(--songbird-magenta) !important; }
+.the-traffic { margin-top: 30%; }
+.css-1i24pk4,
+div[style*='position: sticky'] > div { background-color: transparent !important; }
+
+/*
+ * Clash Verge 的 class 哈希会随版本变化；以下是给实际设置页卡片的稳定兜底。
+ * 深色卡片采用暖紫玻璃而非蓝黑实底，使背景和宋昭美的玫红轮廓仍能透出。
+ */
+.MuiPaper-root:not(.MuiAppBar-root),
+.MuiCard-root {
+    background-color: rgba(22, 14, 31, .34) !important;
+    border-color: rgba(239, 147, 195, .18) !important;
+    backdrop-filter: blur(14px) saturate(105%) !important;
+}
+
+.MuiPaper-root:not(.MuiAppBar-root):hover,
+.MuiCard-root:hover {
+    background-color: rgba(37, 19, 42, .38) !important;
+    border-color: rgba(233, 93, 158, .42) !important;
+}
